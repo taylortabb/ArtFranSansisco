@@ -2,27 +2,23 @@
 :root {
   --width1: 365px;
   --height1: 100px;
-  --x-speed1: 3.44s;
-  --y-speed1: 3.77s;
   --transition-speed1: 2.2s;
 
   --width2: 265px;
   --height2: 25px;
-  --x-speed2: 7s;
-  --y-speed2: 6s;
   --transition-speed2: 2.2s;
 
   --width3: 265px;
   --height3: 25px;
-  --x-speed3: 2s;
-  --y-speed3: 7s;
   --transition-speed3: 2.2s;
 
   --width4: 265px;
   --height4: 25px;
-  --x-speed4: 7s;
-  --y-speed4: 13s;
   --transition-speed4: 2.2s;
+
+  --width5: 265px;
+  --height5: 25px;
+  --transition-speed5: 2.2s;
 }
 
 .el1 { 
@@ -229,6 +225,59 @@
 }
 
 
+/*FARMBOARDS*/
+
+.el5 { 
+  width: var(--width2);
+  height: var(--height2);
+}
+
+.x5 {
+  animation: x5 var(--x-speed3) linear infinite alternate;
+}
+.y5 {
+  animation: y5 var(--y-speed3) linear infinite alternate;
+}
+
+@keyframes x5 {
+  100% {
+    transform: translateX(calc(100vw - var(--width3)));
+  }
+}
+@keyframes y5 {
+  100% {
+    transform: translateY(calc(100vh - var(--height3)));
+  }
+}
+
+.swing5 {
+    animation: swing3 ease-in-out 2s infinite alternate;
+    transform-origin: center -20px;
+    float:left;
+
+    padding: 5px 5px 5px 5px;
+    background-image: url('https://i.imgur.com/mOMxCiG.jpeg');
+    color: white;
+    font-size: 2.4rem;
+}
+ 
+@keyframes swing5 {
+    0% { transform: rotate(4deg); }
+    100% { transform: rotate(-4deg); }
+}
+
+.x5:hover {
+  animation-play-state: paused;
+}
+.y5:hover {
+  animation-play-state: paused;
+}
+.swing5:hover {
+  animation-play-state: paused;
+}
+
+
+
 .footer {
    position: fixed;
    left: 0;
@@ -287,7 +336,7 @@
 /* For devices larger than 400px */
 @media (min-width: 400px) {
   .container {
-    width: 85%;
+    width: 100%;
     padding: 0; }
 }
 
